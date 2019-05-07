@@ -5,7 +5,22 @@ package com.example.retrofitdemo;
  * 2019/5/7
  * 18:06
  */
+
+/**
+ * 返回数据
+ * {
+ * 	"status": 1,
+ * 	"content": {
+ * 		"from": "en-EU",
+ * 		"to": "zh-CN",
+ * 		"out": "\u793a\u4f8b",
+ * 		"vendor": "ciba",
+ * 		"err_no": 0
+ *        }
+ * }
+ */
 public class Translation {
+
 
   private int status;
 

@@ -13,6 +13,7 @@ import retrofit2.http.POST;
 public interface PostRequest_Interface {
 
     @POST("translate?doctype=json&jsonversion=&type=&keyfrom=&model=&mid=&imei=&vendor=&screen=&ssid=&network=&abtest=")
+
     @FormUrlEncoded
     Call<Translation1> getCall(@Field("i") String targetSentence);
     //采用@Post表示Post方法进行请求（传入部分url地址）

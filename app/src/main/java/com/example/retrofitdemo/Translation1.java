@@ -8,10 +8,13 @@ import java.util.List;
  * 18:12
  */
 class Translation1 {
+
     private String type;
     private int errorCode;
     private int elapsedTime;
+
     private List<List<TranslateResultBean>> translateResult;
+
 
     public String getType() {
         return type;
