@@ -36,27 +36,41 @@ public class GetRequest extends AppCompatActivity {
         GetRequest_Interface request = retrofit.create(GetRequest_Interface.class);
 
         //对发送请求进行封装
-        Call<Translation> call = request.getCall();
+      //  Call<Translation> call = request.getCall();
 
-        //步骤6 发送网络请求(异步)
-        call.enqueue(new Callback<Translation>() {
-            //请求成功时回调
+        request.getCall().enqueue(new Callback<Translation>() {
             @Override
             public void onResponse(Call<Translation> call, Response<Translation> response) {
-              //步骤7：处理返回的数据结果
                 response.body().show();
-
             }
 
-            //请求失败时 回调
             @Override
             public void onFailure(Call<Translation> call, Throwable t) {
                 System.out.println("连接失败");
 
                 System.out.println(t.getMessage());
-
             }
         });
+
+        //步骤6 发送网络请求(异步)
+//        call.enqueue(new Callback<Translation>() {
+//            //请求成功时回调
+//            @Override
+//            public void onResponse(Call<Translation> call, Response<Translation> response) {
+//              //步骤7：处理返回的数据结果
+//                response.body().show();
+//
+//            }
+//
+//            //请求失败时 回调
+//            @Override
+//            public void onFailure(Call<Translation> call, Throwable t) {
+//                System.out.println("连接失败");
+//
+//                System.out.println(t.getMessage());
+//
+//            }
+//        });
 
  }
 }
